@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <!-- Link to CSS files -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <title>Clone Viva Real</title>
+</head>
+<body>
+    <header>
+        <nav id="mainNavbar">
+            <section  class="leftNavbarElements">
+                <div id="vivaRealLogo"> 
+                    <img src="./images/vivareallogo-nav.png">
+                </div>
+                <ul>
+                    <div class="navbarContainer">
+                        <li>COMPRAR</li>
+                    </div>
+                    <div class="navbarContainer">
+                        <li>ALUGAR</li>
+                    </div>
+                    <div class="navbarContainer">
+                        <li>IMÓVEIS NOVOS</li>
+                    </div>
+                    <div class="navbarContainer">
+                        <li>SELEÇÃO VIVA REAL</li>
+                    </div>
+                    <div class="navbarContainer">
+                        <li>FINANCIAMENTO</li>
+                    </div>
+                </ul>
+            </section>
+            <section  class="rightNavbarElements">
+                <ul>
+                    <div class="navbarContainer">
+                        <li>ANUNCIAR IMÓVEIS</li>
+                    </div>
+                    <div class="navbarContainer">
+                        <li>ENTRAR</li>
+                    </div>
+                </ul>
+            </section>
+        </nav>
+    </header>
+    <main class="wrapper">
+        <aside class="leftColumn">
+            <section class="mainRealStateFilter">
+                <div class="asideContainer">
+                    <div class="asideElementContainer">
+                        <span>LOCALIZAÇÃO DO IMÓVEL</span>
+                    </div>
+                    <div class="asideElementContainer">
+                        <input type="text" placeholder="Digite uma rua, bairro ou cidade" id="searchField" class="inputText">
+                    </div>
+                </div>
+                <!-- DYNAMIC ASIDE BUTTON -->
+                <div class="asideContainer" id="dynamicAsideButtonWrapper"></div>
+                <div class="asideContainer">
+                    <div class="asideElementContainer">
+                        <span>IMÓVEL COM</span>
+                    </div>
+                    <div class="asideElementContainer">
+                        <div class="turnOnAndOff">
+                            <input type="checkbox" id="turnOnAndOff" class="turnOnAndOffCheckbox">
+                            <label for="turnOnAndOff" class="turnOnAndOffButton" id="labelVirtualTour">Tour Virtual ou Vídeos</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="asideContainer">
+                    <div class="asideElementContainer">
+                        <span>TIPO DE IMÓVEL</span>
+                    </div>
+                    <div class="asideElementContainer">
+                        <select name="" id="realStateType">
+                            <option value="Mostrar Todos">Mostrar Todos</option> 
+                        </select> 
+                    </div>
+                </div>
+                <div class="asideRangeContainer">
+                    <div class="asideRangeElementContainer">
+                        <span>PREÇO MÍNIMO</span>
+                        <input type="number" placeholder="R$" class="inputRangeText" id="minimunPrice">
+                    </div>
+                    <div class="asideRangeElementContainer">
+                        <span>PREÇO MÁXIMO</span>
+                        <input type="number" placeholder="R$ ilimitado" class="inputRangeText" id="maxPrice">
+                    </div>
+                </div>
+                <div class="asideContainer">
+                    <div class="asideElementContainer">
+                        <span>NÚMERO DE QUARTOS</span>
+                    </div>
+                    <div class="buttonContainer">
+                        <button class="asideButton">1+</button>
+                        <button class="asideButton">2+</button>
+                        <button class="asideButton">3+</button>
+                        <button class="asideButton">4+</button>
+                        <button class="asideButton">5+</button>
+                    </div>
+                </div>
+            </section>
+            <section class="secondaryRealStateFilter">
+                <div class="asideRangeContainer" id="areaRange">
+                    <div class="asideRangeElementContainer">
+                        <span>ÁREA MÍNIMA</span>
+                        <input type="text" placeholder="m²" class="inputRangeText">
+                    </div>
+                    <div class="asideRangeElementContainer">
+                        <span>ÁREA MÁXIMA</span>
+                        <input type="text" placeholder="ilimitado m²" class="inputRangeText"> 
+                    </div>
+                </div>
+                <div class="asideContainer">
+                    <div class="asideElementContainer">
+                        <span>NÚMERO DE VAGAS NA GARAGEM</span>
+                    </div>
+                    <div class="buttonContainer">
+                        <button class="asideButton">1+</button>
+                        <button class="asideButton">2+</button>
+                        <button class="asideButton">3+</button>
+                        <button class="asideButton">4+</button>
+                        <button class="asideButton">5+</button>
+                    </div>
+                </div>
+                <div class="asideContainer">
+                    <div class="asideElementContainer" id='numberOfBathrooms'>
+                        <span>NÚMERO DE BANHEIROS</span>
+                    </div>
+                    <div class="buttonContainer">
+                        <button class="asideButton">1+</button>
+                        <button class="asideButton">2+</button>
+                        <button class="asideButton">3+</button>
+                        <button class="asideButton">4+</button>
+                        <button class="asideButton">5+</button>
+                    </div>
+                </div>
+            </section>
+        </aside>
+        <section class="rightColumn">
+            <nav id="secondaryNavbar">
+                <div class="secondaryNavbarContainer">
+                    <div class="secondaryNavbarElementContainer">
+                        <span>COMPRAR</span>
+                    </div>
+                    <div class="secondaryNavbarElementContainer">
+                        <span>ALUGAR</span>
+                    </div>
+                    <div class="secondaryNavbarElementContainer">
+                        <span>IMÓVEIS NOVOS</span>
+                    </div>
+                    <div class="secondaryNavbarElementContainer">
+                        <span>SELEÇÃO VIVA REAL</span>
+                    </div>
+                </div>
+            </nav>
+            <article>
+                <!-- DYNAMIC PARAGRAPH -->
+                <div class="pageMainParagraph" id="dynamicParagraphWrapper"></div>
+                <!-- DYNAMIC BUTTON IN MAIN -->
+                <div id="dynamicButtonInMainWrapper"></div>
+                <!-- DYNAMIC LIST OF LISTINGS -->
+                <ul id="dynamicListWrapper"></ul>
+            </article>
+        </section>
+    </main>
+    <script src="request-methods.js" type="module"></script>
+    <script src="event-listeners.js" type="module"></script>
+    <script src="factory-functions.js" type="module"></script>
+    <script src="city-dictionaries.js" type="module"></script>
+    <script src="amenities-dictionary.js" type="module"></script>
+</body>
+</html>

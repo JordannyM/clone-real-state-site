@@ -1,0 +1,314 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+/* DISPLAY GRID */
+.wrapper{
+    display: grid;
+    margin-left: 4vw;
+    grid-template-areas: "left right";
+    grid-template-columns: 1fr 3fr;
+}
+.leftColumn{
+    grid-area: left;
+}
+.righColumn{
+    grid-area: right;
+}  
+/* MAIN NAVBAR  */
+#mainNavbar{
+    padding: 2vw;
+    background-color: #0a8acc;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9vw;
+    height: 2vh;
+}
+.leftNavbarElements{
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start;
+    padding-right: 1vw;
+    flex-direction: row;
+}
+.rightNavbarElements{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 2vw;
+    padding-right: 3vw;
+}
+.navbarContainer{
+    display: inline-block;
+    align-items: center;
+    padding: 2vw;
+}
+#vivaRealLogo{
+    cursor: pointer;
+    box-shadow: none;
+    padding-left: 1vw;
+}
+.navbarContainer:hover{
+    cursor: pointer;
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+}
+/* ASIDE */
+aside{
+    font-weight: bold;
+    margin-top: 7vh;
+    margin-left: 4.2vw;
+}
+.asideButton{
+    border-radius: 2vw;
+    border: lightgray 1px solid;
+    width: 3.5vw;
+    height: 3vw;
+    background-color: white;
+}
+.mainRealStateFilter{
+    display: flex;
+    flex-direction: column;
+    background-color: #FDD685;
+    padding: 1.2vw;
+    border-radius: 5px;
+    border: #FDB23B 1px solid;
+    color: #76715B;
+    width: fit-content;
+    margin-bottom: 4vh;
+    font-size: 1vw;
+    margin-top: 6vh;
+}
+.secondaryRealStateFilter{
+    width: fit-content;
+    border: lightgray 1px solid;
+    padding: 1.2vw;
+    border-radius: 5px;
+    font-size: 1vw;
+}
+.asideElementContainer{
+    margin-bottom: 2vh;
+}
+.asideRangeContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.asideRangeElementContainer{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2vh;
+}
+.buttonContainer{
+    margin-bottom: 4vh;
+    width: 19vw;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -1vh;
+}
+.inputText{
+    border: none;
+    padding: 0.8vw;
+    border-radius: 3px;
+    background-color: white;
+    border: #FDB23B 0.8px solid;
+    align-items: center;
+    width: 17vw;
+}
+.inputRangeText{
+    border: none;
+    padding: 0.8vw;
+    border-radius: 3px;
+    background-color: white;
+    border: #FDB23B 0.8px solid;
+    align-items: center;
+    width: 6.5vw;
+    margin-top: 2vh;
+}
+#realStateType{
+    border: none;
+    padding: 0.8vw;
+    border-radius: 3px;
+    background-color: white;
+    border: #FDB23B 0.8px solid;
+    align-items: center;
+    width: 19vw;   
+}
+#labelVirtualTour{
+    font-size: 0.8vw;
+    display: flex;
+    align-items: center;
+}
+#labelVirtualTour:hover{
+    cursor: pointer;
+}
+#areaRange{
+    margin-bottom: 2vh;
+}
+#numberOfBathrooms{
+    margin-top: 3vh;
+}
+button:hover{
+    cursor: pointer;
+    box-shadow: inset 0 0 100px 100px rgba(15, 15, 15, 0.055);
+}
+.inputRangeText:focus, .inputText:focus{
+    outline: #0a8acc 1px solid;
+    border: none;
+}
+.asideButton:active{
+    background-color: #0a8acc;
+}
+/* TOGGLE BUTTON - IMÓVEL COM*/
+.turnOnAndOffCheckbox{
+    position: absolute;
+    left: -9999px;
+}
+.turnOnAndOffButton{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+}
+.turnOnAndOffButton::before,
+.turnOnAndOffButton::after {
+    content: "";
+    box-shadow: 0 0 0 1px #E4CF8C;
+    transition: all 0.2s ease;
+    background-color: #E4CF8C;
+}
+.turnOnAndOffButton::before{
+    display: inline-block;
+    border-radius: 2vw;
+    height: 2vw;
+    width: 4vw;
+    margin-right: 1vw;
+    margin-right: 2vw;
+}
+.turnOnAndOffButton::after{
+    position: absolute;
+    top: 0.05vw;
+    left: 0.05vw;
+    width: 1.95vw;
+    height: 1.95vw;
+    border-radius: 100%;
+    background: #FFF;
+}
+.turnOnAndOffCheckbox:checked + .turnOnAndOffButton::after{
+    left: 2.025vw;
+}
+.turnOnAndOffCheckbox:focus + .turnOnAndOffButton::before{
+    outline: 3px solid #E4CF8C;
+}
+/* SECONDARY NAVBAR */
+.secondaryNavbarContainer{
+    margin-top: 6vh;
+    color: #0a8acc;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1vw;
+    padding-bottom: 0.001vw;
+    border-bottom: .6px rgb(211, 211, 211) solid;
+    width: 66vw;
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start;
+    padding-right: 1vw;
+    flex-direction: row;
+}
+.secondaryNavbarElementContainer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1vw;
+}
+.secondaryNavbarElementContainer:hover{
+    cursor: pointer;
+    box-shadow: inset 0 0 100px 100px rgba(176, 179, 221, 0.144);
+}
+.secondaryNavbarElementContainer:focus{
+    border-bottom: #0a8acc 1px solid;
+}
+/* MAIN*/
+.pageMainParagraph{
+    font-size: 1.5vw;
+    margin-bottom: 2vh;
+    padding-top: 3vh;
+}
+.boldNumberSpan{
+    font-weight: bold;
+}
+/* LISTINGS STYLE - DYNAMIC CONTENTS */
+.listingsContainer{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2vh;
+}
+.listingImage{
+    width: 25vw;
+    margin-right: 2vw;
+}
+.listingDetailsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+.listingDescription{
+    padding-top: 1vh;
+    margin-bottom: 2vh;
+}
+.listingCharacteristics{
+    font-size: 1vw;
+}
+.listingCharacteristicNumbers{
+    font-size: 1.2vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+.listingAmenitiesContainer{
+    margin-bottom: 3vh;
+}
+.amenitiesElement{
+    font-size: 0.8vw;
+    color: rgba(128, 128, 128, 0.774);
+    padding: 0.3vw;
+    background-color: rgba(211, 211, 211, 0.589);
+    border-radius: 9px;
+    font-weight: bold;
+    display: inline;
+    margin-right: 1vw;
+}
+.dynamicButtonInAside{
+    width: fit-content;
+    border-radius: 20px;
+    margin-bottom: 1.8vh;
+    background-color: #FDD685;
+    border: none;
+    color: #76715B;
+    font-weight: bold;
+    font-size: 1vw;
+}
+.dynamicButtonInMain{
+    width: fit-content;
+    border: 1px solid #0a8acc;
+    border-radius: 20px;
+    margin-bottom: 4vh;
+    background-color: white;
+    color: #0a8acc;
+    font-size: 1vw;
+}
+#dynamicErrorWrapper{
+    font-size: 4vw;
+    text-align: center;
+}
+.errorTextMessage, .errorStatusMessage{
+    margin-bottom: 4vh;
+}
+.errorStatusMessage{
+    color: red;
+}
